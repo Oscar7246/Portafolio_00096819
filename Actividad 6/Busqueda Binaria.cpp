@@ -1,44 +1,40 @@
-#include<iostream>
-#include<conio.h>
+#include <cstdlib>
+#include <iostream>
 
 using namespace std;
 
+/*
+ *
+ */
+int arreglo[8] ={1,3,4,5,17,18,31,33};
+
+
+int busq(int low, int high, int x);
+
 int main(){
-	int numeros[] =  {1, 3, 4, 5, 17, 18, 31, 33};
-	int inf,sup,mitad,dato,i;
-	char band='F';
 
-	cout << "Ingrese un numero del 1 al 33: ";
-	cin >> dato;
+    int low=0, high=7, i,x;
+    cin>>x;
 
-	//Algoritmo de la Busqueda Binaria
-	inf=0;
-	sup=7;
-	i=0;
-	while((inf<=sup)&&(i<8)){
-		mitad = (inf+sup)/2;
-		if(numeros[mitad] == dato){
-			band='V';
-			break;
-		}
-		if(numeros[mitad]>dato){
-			sup = mitad;
-			mitad = (inf+sup)/2;
-		}
-		if(numeros[mitad]<dato){
-			inf = mitad;
-			mitad = (inf+sup)/2;
-		}
-		i++;
-	}
+    i=busq(low,high,x);
 
-	if(band == 'V'){
-		cout<<"El numero se encontro en la pos: "<<mitad<<endl;
-	}
-	else{
-		cout<<"El numero NO se encontro";
-	}
+    if (i==(-1))
+        cout<<"no hay, no existe";
+    else
+        cout<<"Está en el puesto "<<i;
+                    return 0;
+}
 
-	getch();
-	return 0;
+int busq(int low, int high, int x){
+
+
+    if(low > high)
+        return(-1);
+    int mid=((low+high)/2);
+    if(x == arreglo[mid])
+        return(mid);
+    if(x < arreglo[mid])
+        busq(low,mid-1,x);
+    else
+        busq(mid+1,high,x);
 }
