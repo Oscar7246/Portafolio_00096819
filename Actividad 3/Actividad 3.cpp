@@ -4,8 +4,9 @@ int main()
 {
     int n=0, i=0;
     float num[100], suma=0.0, mediana, media;
-    cout << "ingrese la cantidad de numeros a usar (debe ingresarlos en orden de menor a mayor): ";
+    cout << "ingrese la cantidad de numeros a usar: ";
     cin >> n;
+    cout <<"\n debe ingresarlos en orden de menor a mayor" << endl;
     while (n > 100 || n <= -100)
     {
         cout << "Error! el numero es demasiado grande (1 a 100)." << endl;
