@@ -1,0 +1,20 @@
+A-B/(C*D$E) Infija
+
+Resolviendo
+
+A-B/(C*DE$)
+A-B/(CDE$*)
+A-B(CDE$*)/
+
+AB-CDE$*/ postfija
+
+((A+B)*C-(D-E))$(F+G) Infija
+
+Resolviendo
+
+((AB+)*C-(DE-))$(F+G)
+((AB+)C*-(DE-))$(FG+)
+(AB+C*DE--)$(FG+)
+
+AB+C*DE--FG+$ Postfija
+
