@@ -1,3 +1,5 @@
+//Oscar Alfredo Cañass Mendez 00096819
+//Jonathan Alexis Cardona Garcia 00128819
 #include <iostream>
 #include <string>
 using namespace std;
@@ -265,7 +267,7 @@ bool buscarLibroCiencia() {
 }
 
 void eliminarLibroMisterio(){
-
+    while(true){
     Nodo *p = pInicio, *q = NULL;
 
     while(p != NULL && (p->dato).genero != misterio){
@@ -283,7 +285,7 @@ void eliminarLibroMisterio(){
     delete(p);
     cout << "Libro borrado!" << endl;
     }
-
+}
 
 void menu(){
     cout<<" 1. Agregar libro                         "<<endl;
